@@ -35,6 +35,9 @@ players.each do |node|
 
   puts(player)
   puts
+
+  # Goofing off some more
+
   #puts(projection[players.index(node)].text)
   #puts(stats[playerIndex*10].text + " " + stats[playerIndex*10+1].text) 
 end
