@@ -38,6 +38,9 @@ players.each do |node|
   puts(player)
   puts
 
+
+#Real work again..
+
   # Goofing off some more
 
   # More real work
