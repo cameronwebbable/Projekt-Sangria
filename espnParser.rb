@@ -28,6 +28,7 @@ players.each do |node|
   playerIndex = players.index(node)
   player = node.text.split(%r{[\s*|,|/\302\240/]}).delete_if {|x| x == ""}
   
+  puts(node)
   puts(player)
   puts
   #puts(projection[players.index(node)].text)
