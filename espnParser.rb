@@ -28,6 +28,10 @@ players.each do |node|
   playerIndex = players.index(node)
   player = node.text.split(%r{[\s*|,|/\302\240/]}).delete_if {|x| x == ""}
   
+  # This is some real work that Cameron needed done
+  # blah blah blah
+
+
   puts(player)
   #puts(projection[players.index(node)].text)
   #puts(stats[playerIndex*10].text + " " + stats[playerIndex*10+1].text) 
