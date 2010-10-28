@@ -30,10 +30,6 @@ players.each do |node|
   
   puts(node)
 
-  # Who-Dat!! Who-Dat!!
-
-  # This is some real work that Cameron needed done
-  # blah blah blah
 
   puts(player)
   puts
