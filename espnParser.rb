@@ -7,7 +7,7 @@
     
   = DESCRIPTION
     This application rocks your world by utilizing the power of xpath and Nokogiri
-    to collection ESPN's projection data from their website for further analysis. WOW!    
+    to collect ESPN's projection data from their website for further analysis. WOW!    
 =end
 
 require 'open-uri'
@@ -22,6 +22,8 @@ projection = doc.xpath('//tr/td[@class="playertableStat appliedPoints sortedCell
 stats = doc.xpath('//tr/td[@class="playertableStat "]')
 
 #For now, let's output the collected data to the console.
+#Note: There's some missing stuff here that I need to come back and 
+#re add later (um yeah, the PROJECTIONS!!!)
 players.each do |node|
   playerIndex = players.index(node)
   player = node.text.split(%r{[\s*|,|/\302\240/]}).delete_if {|x| x == ""}
