@@ -31,8 +31,14 @@ for i in (1..30)
 
 	  playerIndex = players.index(node)
 	  playerRegEx = Regexp.new '[\s*|,|/\302\240/]', nil, 'n'
-	  #we enforce ASCII-8Bit to make this happy for ruby 1.9...
-	  player = node.text.force_encoding("ASCII-8Bit").split(playerRegEx).delete_if {|x| x == ""}
+
+	  if RUBY_VERSION.delete('.').to_i > 190
+		  #we enforce ASCII-8Bit to make this happy for ruby 1.9...
+		  player = node.text.force_encoding("ASCII-8Bit").split(playerRegEx).delete_if {|x| x == ""}
+	  else
+		  player = node.text.split(playerRegEx).delete_if {|x| x == ""}
+	  end
+		  
 	  puts(player)
 	  #puts(projection[players.index(node)].text)
 	  #puts(stats[playerIndex*10].text + " " + stats[playerIndex*10+1].text) 
